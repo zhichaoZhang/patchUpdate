@@ -20,9 +20,9 @@ import android.support.v4.content.ContextCompat;
  */
 
 public class PatchUpdateUtil {
-    private static final int RESULT_CODE_SUC = 0;
-    private static final int RESULT_CODE_PARAM_ERROR = -1;
-    private static final int RESULT_CODE_NO_PERMISSION = -2;
+    public static final int RESULT_CODE_SUC = 0;
+    public static final int RESULT_CODE_PARAM_ERROR = -1;
+    public static final int RESULT_CODE_NO_PERMISSION = -2;
 
     static {
         System.loadLibrary("bsdiff");
