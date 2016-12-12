@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Integer doInBackground(String... params) {
-            return PatchUpdateUtil.fileCombine(params[0], params[1], params[2]);
+            return PatchUpdateUtil.filePatch(getBaseContext(), params[0], params[1], params[2]);
         }
     }
 
