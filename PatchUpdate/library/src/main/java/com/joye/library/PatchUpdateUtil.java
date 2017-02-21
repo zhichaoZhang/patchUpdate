@@ -29,7 +29,7 @@ public class PatchUpdateUtil {
         System.loadLibrary("bspatch");
     }
 
-    public static int fileDiffer(Context context, String oldFile, String newFile, String differFile) {
+    public int fileDiffer(Context context, String oldFile, String newFile, String differFile) {
         int result = RESULT_CODE_SUC;
         if(oldFile == null || newFile == null || differFile == null) {
             result = RESULT_CODE_PARAM_ERROR;
@@ -41,7 +41,7 @@ public class PatchUpdateUtil {
         return result;
     }
 
-    public static int filePatch(Context context, String oldFile, String newFile, String patchFile) {
+    public int filePatch(Context context, String oldFile, String newFile, String patchFile) {
         int result = RESULT_CODE_SUC;
         if(oldFile == null || newFile == null || patchFile == null) {
             result = RESULT_CODE_PARAM_ERROR;
@@ -53,11 +53,11 @@ public class PatchUpdateUtil {
         return result;
     }
 
-    private static native int genDifferFile(String oldFile, String newFile, String differFile);
+    private native int genDifferFile(String oldFile, String newFile, String differFile);
 
-    private static native int fileCombine(String oldFile, String newFile, String patchFile);
+    private native int fileCombine(String oldFile, String newFile, String patchFile);
 
-    private static boolean hasStoragePermission(Context context) {
+    private boolean hasStoragePermission(Context context) {
         int permissionCheck = ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         return permissionCheck == PackageManager.PERMISSION_GRANTED;
     }

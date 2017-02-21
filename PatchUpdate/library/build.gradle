@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//一个方便上传工程到bintray的工具
 
 android {
     compileSdkVersion 25
@@ -8,25 +9,14 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-//        ndk {
-//            moduleName 'bspatch'
-//        }
-
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    sourceSets {
-        main {
-//            jni.srcDirs 'src/main/jni_src'
-            jni.srcDirs = []
         }
     }
 }
@@ -38,4 +28,13 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
+}
+
+publish {
+    userOrg = 'joye'
+    groupId = 'com.joye'
+    artifactId = 'patchupdate'
+    publishVersion = '1.0.1'
+    desc = 'one plugin for patch update'
+    website = 'https://github.com/zhichaoZhang/patchUpdate'
 }

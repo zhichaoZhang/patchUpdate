@@ -12,7 +12,7 @@
     tools:context="com.joye.patchupdate.MainActivity">
 
     <Button
-        android:text="检查版本"
+        android:text="@string/check_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -25,13 +25,24 @@
         android:onClick="onCheckVersionBtnClick"/>
 
     <Button
-        android:text="更新版本"
+        android:text="@string/update_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:id="@+id/button2"
         android:onClick="onUpdateVersionBtnClick"
         android:layout_below="@+id/btn_check_version"
+        android:layout_alignLeft="@+id/btn_check_version"
+        android:layout_alignStart="@+id/btn_check_version"/>
+
+    <Button
+        android:text="@string/file_differ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/button3"
+        android:onClick="onFileDifferBtnClick"
+        android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/btn_check_version"
         android:layout_alignStart="@+id/btn_check_version"/>
 </RelativeLayout>

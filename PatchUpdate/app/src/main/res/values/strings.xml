@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">PatchUpdate</string>
+    <string name="check_version">检查版本</string>
+    <string name="update_version">更新版本</string>
+    <string name="file_differ">生成差分文件</string>
 </resources>
